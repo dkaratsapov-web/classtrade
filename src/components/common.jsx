@@ -1,6 +1,56 @@
 import { useState } from 'react'
 import { ArrowIcon } from './icons/index.jsx'
 
+// Маска телефона +7 (XXX) XXX-XX-XX
+function formatPhone(value) {
+  let digits = value.replace(/\D/g, '')
+  if (digits.startsWith('8')) digits = '7' + digits.slice(1)
+  if (digits && !digits.startsWith('7')) digits = '7' + digits
+  digits = digits.slice(0, 11)
+  if (!digits) return ''
+  const d = digits.slice(1)
+  let res = '+7'
+  if (d.length) res += ' (' + d.slice(0, 3)
+  if (d.length >= 3) res += ') ' + d.slice(3, 6)
+  if (d.length >= 6) res += '-' + d.slice(6, 8)
+  if (d.length >= 8) res += '-' + d.slice(8, 10)
+  return res
+}
+
+// Поле формы — тип/ограничения определяются по названию
+function Field({ label }) {
+  const lower = label.toLowerCase()
+  const isPhone = lower.includes('телефон')
+  const isInn = lower.includes('инн')
+  const isEmail = lower.includes('mail')
+  const [val, setVal] = useState('')
+
+  if (isPhone) {
+    return (
+      <input
+        placeholder={label}
+        inputMode="tel"
+        value={val}
+        onChange={(e) => setVal(formatPhone(e.target.value))}
+      />
+    )
+  }
+  if (isInn) {
+    return (
+      <input
+        placeholder={label}
+        inputMode="numeric"
+        value={val}
+        onChange={(e) => setVal(e.target.value.replace(/\D/g, '').slice(0, 12))}
+      />
+    )
+  }
+  if (isEmail) {
+    return <input placeholder={label} type="email" inputMode="email" />
+  }
+  return <input placeholder={label} />
+}
+
 // Форма заявки: поля + рабочая галочка согласия (по умолчанию включена,
 // можно снять; без неё кнопка отправки заблокирована)
 export function LeadForm({ fields, submitLabel, btnClass = 'btn', className = 'contact-form__fields' }) {
@@ -8,7 +58,7 @@ export function LeadForm({ fields, submitLabel, btnClass = 'btn', className = 'c
   return (
     <div className={className}>
       {fields.map((f) => (
-        <input key={f} placeholder={f} />
+        <Field key={f} label={f} />
       ))}
       <label className="agree">
         <input
