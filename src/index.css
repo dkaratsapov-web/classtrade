@@ -1,6 +1,6 @@
 /* ============================================================
    CLASS TRADE — глобальные стили и токены
-   База: десктоп 1440px, контейнер 1240px (полосы/шапка/подвал — 1320px)
+   База: десктоп 1440px, контейнер 1440px (полосы/шапка/подвал/hero — 1520px)
    Источник истины — design/reference/Главная.dc.html
    ============================================================ */
 
@@ -22,6 +22,10 @@
 
   --shadow-photo: 0 18px 50px rgba(1, 37, 79, 0.22);
   --shadow-card: 0 14px 40px rgba(1, 37, 79, 0.08);
+
+  /* Ширины контейнеров (расширенный вариант) */
+  --w-content: 1440px; /* основной контент-контейнер */
+  --w-band: 1520px;    /* шапка/подвал/полосы/hero */
 }
 
 * {
@@ -44,25 +48,25 @@ body {
   width: 100%;
 }
 
-/* Точечная текстура (dot-grid) на светлых секциях */
+/* Точечная текстура (dot-grid) на светлых секциях — плотная сетка как в исходном макете */
 .dots {
-  background-image: radial-gradient(#cbe0f7 2px, transparent 2px);
-  background-size: 30px 30px;
+  background-image: radial-gradient(#b8d2ef 2px, transparent 2px);
+  background-size: 24px 24px;
 }
 /* Точки на тёмных секциях */
 .dots-dark {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px);
-  background-size: 30px 30px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 2px, transparent 2px);
+  background-size: 24px 24px;
 }
 
 /* Контейнеры */
 .container {
-  max-width: 1240px;
+  max-width: var(--w-content);
   margin: 0 auto;
   padding: 0 24px;
 }
 .container-wide {
-  max-width: 1320px;
+  max-width: var(--w-band);
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -124,7 +128,8 @@ body {
 }
 .sticker .b {
   align-self: flex-end;
-  margin-top: -2px;
+  /* небольшой зазор между плашками — чтобы не сливались в одно пятно (особенно navy+navy) */
+  margin-top: 8px;
   transform: rotate(2.5deg);
   position: relative;
   z-index: 2;
@@ -191,7 +196,7 @@ body {
   width: 100%;
 }
 .header__inner {
-  max-width: 1320px;
+  max-width: var(--w-band);
   margin: 0 auto;
   padding: 16px 24px;
   display: flex;
@@ -282,11 +287,11 @@ body {
 .hero {
   position: relative;
   background: var(--navy);
-  padding: 64px 0 0;
+  padding: 64px 0 64px;
   overflow: hidden;
 }
 .hero__head {
-  max-width: 1180px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 0 24px;
   text-align: center;
@@ -326,7 +331,7 @@ body {
   transform: rotate(2.5deg);
 }
 .hero__grid {
-  max-width: 1320px;
+  max-width: var(--w-band);
   margin: 36px auto 0;
   padding: 0 24px;
   display: grid;
@@ -366,10 +371,26 @@ body {
   color: #cfe0ff;
   padding-bottom: 8px;
 }
+/* УТП с жирной точкой слева */
 .hero__lead {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  text-align: left;
+  margin: 0 0 48px;
+}
+.hero__lead-dot {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blue);
+  margin-top: 5px;
+}
+.hero__lead p {
+  margin: 0;
   font-size: 16px;
   line-height: 1.5;
-  margin: 0 0 22px;
   color: #e6f1ff;
 }
 .hero__cta {
@@ -503,7 +524,7 @@ body {
   width: 100%;
 }
 .bar__inner {
-  max-width: 1320px;
+  max-width: var(--w-band);
   margin: 0 auto;
   padding: 22px 24px;
   display: flex;
@@ -913,7 +934,7 @@ body {
   padding: 36px 0;
 }
 .footer__inner {
-  max-width: 1320px;
+  max-width: var(--w-band);
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
