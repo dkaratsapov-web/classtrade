@@ -1,4 +1,4 @@
-import { Cta } from './common.jsx'
+import { ArrowIcon } from './icons/index.jsx'
 
 export default function Hero() {
   return (
@@ -35,7 +35,12 @@ export default function Hero() {
             Залог успешного обучения и комфорта преподавателей
           </p>
           <div className="hero__cta">
-            <Cta label="Перейти в каталог" />
+            <button className="btn-hero">
+              <span className="btn-hero__label">Перейти в каталог</span>
+              <span className="btn-hero__icon">
+                <ArrowIcon size={20} stroke="#036aff" />
+              </span>
+            </button>
           </div>
         </div>
 
