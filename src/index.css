@@ -851,15 +851,15 @@ body {
 /* ===================== СФЕРЫ ВНЕДРЕНИЯ (аккордеон) ===================== */
 .spheres {
   display: grid;
-  grid-template-columns: 460px 1fr;
-  gap: 54px;
-  align-items: center;
+  grid-template-columns: 560px 1fr;
+  gap: 56px;
+  align-items: stretch;
 }
 .spheres__photo {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-photo);
-  height: 420px;
+  height: 560px;
 }
 .spheres__photo img {
   width: 100%;
@@ -882,9 +882,11 @@ body {
   line-height: 1;
 }
 .sphere-item__desc {
-  margin-top: 10px;
-  font-size: 15px;
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--muted);
+  max-width: 680px;
 }
 
 /* ===================== О КОМПАНИИ ===================== */
