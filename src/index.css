@@ -665,9 +665,6 @@ body {
   padding: 15px 0;
   animation: marquee 38s linear infinite;
 }
-.bar:hover .marquee__track {
-  animation-play-state: paused;
-}
 @keyframes marquee {
   from {
     transform: translateX(0);
