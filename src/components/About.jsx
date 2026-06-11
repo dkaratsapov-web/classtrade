@@ -24,7 +24,7 @@ export default function About() {
         <Sticker a="О КОМПАНИИ" b="CLASS TRADE" bClass="chip--white" />
 
         <div className="about">
-          <div className="about__photo">
+          <div className="about__photo about__photo--left">
             <img src="assets/hero-1.png" alt="" />
           </div>
           <div className="about__text">
@@ -43,7 +43,7 @@ export default function About() {
             </p>
             <Cta label="Подробнее" btnClass="btn btn--ghost" />
           </div>
-          <div className="about__photo">
+          <div className="about__photo about__photo--right">
             <img src="assets/room-tv.png" alt="" />
           </div>
         </div>

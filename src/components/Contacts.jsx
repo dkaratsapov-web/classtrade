@@ -38,10 +38,10 @@ export default function Contacts() {
               <path
                 d="M120,30 C 420,120 360,290 110,320 C 420,350 470,540 110,600"
                 stroke="#fff"
-                strokeWidth="64"
+                strokeWidth="56"
                 fill="none"
                 strokeLinecap="round"
-                opacity=".85"
+                opacity=".12"
               />
             </svg>
 
