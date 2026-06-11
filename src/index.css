@@ -32,8 +32,10 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 ::placeholder {
@@ -1646,5 +1648,56 @@ body {
   .mobile-menu__call {
     margin-top: 6px;
     text-align: center;
+  }
+}
+
+/* ===================== СТРАНИЦА «КОНТАКТЫ» ===================== */
+.contacts-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+.contact-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.contact-card {
+  background: #fff;
+  border-radius: var(--r-card);
+  padding: 28px 26px;
+  box-shadow: var(--shadow-card);
+}
+.contact-card__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.contact-card__label {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.contact-card__value {
+  font-weight: 800;
+  font-size: 19px;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+  .contacts-page {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
   }
 }

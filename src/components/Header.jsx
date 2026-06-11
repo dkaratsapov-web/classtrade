@@ -32,7 +32,7 @@ export default function Header() {
           <a href="#/about">О компании</a>
           <a href="#">Проекты</a>
           <a href="#">Блог</a>
-          <a href="#">Контакты</a>
+          <a href="#/contacts">Контакты</a>
         </nav>
 
         {/* Правый блок: поиск, заказать звонок, избранное, корзина + меню (моб.) */}
@@ -68,7 +68,7 @@ export default function Header() {
           <a href="#/about" onClick={close}>О компании</a>
           <a href="#" onClick={close}>Проекты</a>
           <a href="#" onClick={close}>Блог</a>
-          <a href="#" onClick={close}>Контакты</a>
+          <a href="#/contacts" onClick={close}>Контакты</a>
           <button className="call-btn mobile-menu__call" onClick={close}>
             Заказать звонок
           </button>
