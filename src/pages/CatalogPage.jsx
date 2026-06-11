@@ -27,6 +27,12 @@ export default function CatalogPage() {
         <div className="container">
           <Sticker a="ВЫБЕРИТЕ" b="КАТЕГОРИЮ" />
 
+          {/* Подсказка о горизонтальном скролле (моб.) */}
+          <div className="scroll-hint" aria-hidden="true">
+            <span>Листайте</span>
+            <ArrowIcon size={18} stroke="#036aff" />
+          </div>
+
           {/* Верхние категории */}
           <div className="catalog-cats">
             {CATEGORIES.map((c, i) => (

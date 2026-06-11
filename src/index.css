@@ -2888,3 +2888,35 @@ img {
     height: 100px;
   }
 }
+
+/* Подсказка «листайте» (горизонтальный скролл категорий) — только на мобильной */
+.scroll-hint {
+  display: none;
+}
+@media (max-width: 600px) {
+  .scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: -28px 0 14px;
+  }
+  .scroll-hint svg {
+    animation: hintSlide 1.2s ease-in-out infinite;
+  }
+}
+@keyframes hintSlide {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(7px);
+    opacity: 1;
+  }
+}
