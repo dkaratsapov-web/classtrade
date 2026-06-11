@@ -1,18 +1,14 @@
 import { useState } from 'react'
 import { Sticker } from '../components/common.jsx'
 import { ArrowIcon } from '../components/icons/index.jsx'
+import { LANDINGS, KINDERGARTEN_SUBS } from '../data/landings.js'
 
 const CATEGORIES = [
   {
     name: 'Детский сад',
     img: 'room-kinder.png',
-    subs: [
-      'Игровая комната', 'Сенсорная комната', 'Кабинет логопеда', 'Кабинет психолога',
-      'Экспериментирование', 'Окружающий мир', 'Математика и информатика', 'Наглядные пособия',
-      'Технические средства обучения', 'Конструирование и проектирование', 'Технология', 'Искусство',
-      'Философия', 'Методические материалы', 'Учебное оборудование', 'Спортивный зал',
-      'Мебель', 'Софт', 'Медиазона',
-    ],
+    // карточки ведут на посадочные страницы (#/catalog/<slug>)
+    subs: KINDERGARTEN_SUBS.map((slug) => ({ name: LANDINGS[slug].title, slug })),
   },
   {
     name: 'Начальная школа',
@@ -92,14 +88,18 @@ export default function CatalogPage() {
 
           {/* Подкатегории выбранной категории */}
           <div className="catalog-subs">
-            {cat.subs.map((s) => (
-              <a key={s} href="#" className="sub-card">
-                <span>{s}</span>
-                <span className="sub-card__arrow">
-                  <ArrowIcon size={16} />
-                </span>
-              </a>
-            ))}
+            {cat.subs.map((s) => {
+              const label = typeof s === 'string' ? s : s.name
+              const href = typeof s === 'string' ? '#' : `#/catalog/${s.slug}`
+              return (
+                <a key={label} href={href} className="sub-card">
+                  <span>{label}</span>
+                  <span className="sub-card__arrow">
+                    <ArrowIcon size={16} />
+                  </span>
+                </a>
+              )
+            })}
           </div>
         </div>
       </section>
