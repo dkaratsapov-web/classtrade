@@ -316,7 +316,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 132px 0 64px;
+  padding: 168px 0 64px;
   overflow: hidden;
 }
 .hero__head {
