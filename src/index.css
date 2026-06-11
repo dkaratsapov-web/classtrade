@@ -1356,8 +1356,15 @@ body {
     margin-bottom: 32px;
   }
   .chip {
-    font-size: 26px;
-    padding: 6px 16px;
+    font-size: 21px;
+    padding: 6px 14px;
+  }
+  /* меньше «прижатия» диагональных плашек к краям на узком экране */
+  .sticker .a {
+    transform: rotate(-2deg);
+  }
+  .sticker .b {
+    transform: rotate(2deg);
   }
 
   .cards-3 {
