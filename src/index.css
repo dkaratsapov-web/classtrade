@@ -2589,3 +2589,16 @@ img {
 .about-card:has(.about-card__icon:hover) .about-card__icon svg {
   stroke: var(--blue);
 }
+
+/* Заглушка новости (модалка блога) */
+.news-modal__badge {
+  position: static;
+  display: inline-block;
+  margin: 0 0 12px;
+}
+.news-modal__p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #41566f;
+  margin: 0 0 14px;
+}
