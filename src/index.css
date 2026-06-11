@@ -1212,8 +1212,7 @@ body {
   }
   .btn-hero {
     min-width: 0;
-    width: 100%;
-    max-width: 460px;
+    width: auto;
   }
 
   .cards-3 {
@@ -1290,20 +1289,23 @@ body {
     padding: 6px 12px;
   }
   .logo__text {
-    font-size: 16px;
+    display: none;
   }
   .logo__mark {
-    width: 34px;
-    height: 34px;
-    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    font-size: 21px;
   }
   .catalog-btn {
     padding: 9px 14px;
     font-size: 13px;
   }
   .header__actions .call-btn,
-  .header__actions .icon-btn:first-child {
+  .header__actions .icon-btn {
     display: none;
+  }
+  .header__left {
+    gap: 10px;
   }
   .icon-btn {
     width: 36px;
