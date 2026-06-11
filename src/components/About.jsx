@@ -25,7 +25,7 @@ export default function About() {
 
         <div className="about">
           <div className="about__photo about__photo--left">
-            <img src="assets/hero-1.png" alt="" />
+            <img src="assets/hero-1.jpg" alt="" />
           </div>
           <div className="about__text">
             <p>
@@ -44,7 +44,7 @@ export default function About() {
             <Cta label="Подробнее" btnClass="btn btn--ghost" />
           </div>
           <div className="about__photo about__photo--right">
-            <img src="assets/room-tv.png" alt="" />
+            <img src="assets/room-tv.jpg" alt="" />
           </div>
         </div>
       </div>

@@ -2,15 +2,15 @@ import { Sticker, Cta } from '../components/common.jsx'
 import Contacts from '../components/Contacts.jsx'
 
 const IMGS = [
-  'room-tv.png',
-  'room-desks.png',
-  'room-map.png',
-  'room-shelves.png',
-  'room-office.png',
-  'room-kinder.png',
-  'room-sport.png',
-  'hero-1.png',
-  'hero-2.png',
+  'room-tv.jpg',
+  'room-desks.jpg',
+  'room-map.jpg',
+  'room-shelves.jpg',
+  'room-office.jpg',
+  'room-kinder.jpg',
+  'room-sport.jpg',
+  'hero-1.jpg',
+  'hero-2.jpg',
 ]
 
 export default function NewsPage() {

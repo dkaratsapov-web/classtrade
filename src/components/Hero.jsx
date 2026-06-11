@@ -13,7 +13,7 @@ export default function Hero() {
 
       <div className="hero__grid">
         <div className="hero__photo hero__photo--left">
-          <img src="assets/hero-1.png" alt="" />
+          <img src="assets/hero-1.jpg" alt="" fetchpriority="high" />
         </div>
 
         <div className="hero__center">
@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
 
         <div className="hero__photo hero__photo--right">
-          <img src="assets/hero-2.png" alt="" />
+          <img src="assets/hero-2.jpg" alt="" fetchpriority="high" />
         </div>
       </div>
 

@@ -14,12 +14,12 @@ const FILTERS = [
 ]
 
 const IMGS = [
-  'room-desks.png',
-  'room-map.png',
-  'room-shelves.png',
-  'room-office.png',
-  'room-tv.png',
-  'room-kinder.png',
+  'room-desks.jpg',
+  'room-map.jpg',
+  'room-shelves.jpg',
+  'room-office.jpg',
+  'room-tv.jpg',
+  'room-kinder.jpg',
 ]
 
 export default function ProjectsPage() {

@@ -1,11 +1,16 @@
 import { useState } from 'react'
-import { LogoMark } from './common.jsx'
+import { LogoMark, Cta } from './common.jsx'
 import { SearchIcon, HeartIcon, CartIcon } from './icons/index.jsx'
 import { useCart } from '../cart/CartContext.jsx'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [callOpen, setCallOpen] = useState(false)
   const close = () => setMenuOpen(false)
+  const openCall = () => {
+    setMenuOpen(false)
+    setCallOpen(true)
+  }
   const { count } = useCart()
 
   return (
@@ -16,7 +21,7 @@ export default function Header() {
           <a href="#/" className="header__seg header__seg--logo" onClick={close}>
             <div className="logo">
               <LogoMark />
-              <span className="logo__text">CLASS TRADE</span>
+              <img className="logo__text logo__wm" src="wordmark.png" alt="CLASS TRADE" />
             </div>
           </a>
           <a href="#/catalog" className="catalog-btn" onClick={close}>
@@ -42,7 +47,7 @@ export default function Header() {
           <button className="icon-btn" aria-label="Поиск">
             <SearchIcon />
           </button>
-          <button className="call-btn">Заказать звонок</button>
+          <button className="call-btn" onClick={openCall}>Заказать звонок</button>
           <button className="icon-btn" aria-label="Избранное">
             <HeartIcon />
           </button>
@@ -72,9 +77,34 @@ export default function Header() {
           <a href="#/projects" onClick={close}>Проекты</a>
           <a href="#/news" onClick={close}>Блог</a>
           <a href="#/contacts" onClick={close}>Контакты</a>
-          <button className="call-btn mobile-menu__call" onClick={close}>
+          <button className="call-btn mobile-menu__call" onClick={openCall}>
             Заказать звонок
           </button>
+        </div>
+      )}
+
+      {/* Поп-ап «Заказать звонок» */}
+      {callOpen && (
+        <div className="modal-overlay" onClick={() => setCallOpen(false)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal__close" aria-label="Закрыть" onClick={() => setCallOpen(false)}>
+              ×
+            </button>
+            <h3>Заказать звонок</h3>
+            <a className="modal__phone" href="tel:+74822111111">+7 (4822) 111-11-11</a>
+            <p className="modal__sub">
+              Оставьте номер — перезвоним в течение 15 минут и проконсультируем по
+              всем вопросам.
+            </p>
+            <div className="modal__form">
+              <input placeholder="Имя" />
+              <input placeholder="Телефон*" />
+              <label className="contact-form__agree">
+                <i></i>Я согласен с политикой конфиденциальности сайта
+              </label>
+              <Cta label="Заказать звонок" />
+            </div>
+          </div>
         </div>
       )}
     </header>

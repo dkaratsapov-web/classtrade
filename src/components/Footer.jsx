@@ -7,7 +7,7 @@ export default function Footer() {
         <div>
           <div className="footer__logo">
             <LogoMark />
-            <span className="logo__text">CLASS TRADE</span>
+            <img className="logo__text logo__wm" src="wordmark.png" alt="CLASS TRADE" />
           </div>
           <p className="footer__copy">Весь контент на этом сайте защищён авторским правом</p>
         </div>

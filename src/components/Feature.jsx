@@ -59,7 +59,7 @@ export default function Feature() {
           </div>
 
           <div className="feature__photo">
-            <img src="assets/room-kinder.png" alt="" />
+            <img src="assets/room-kinder.jpg" alt="" />
             <div className="feature__slider">
               <span onClick={() => setSlide((s) => (s + FEATURE_TOTAL - 1) % FEATURE_TOTAL)}>‹</span>
               <span className="label">{label}</span>

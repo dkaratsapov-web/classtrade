@@ -2331,3 +2331,94 @@ body {
     align-self: center;
   }
 }
+
+/* ===================== ВОРДМАРК (картинка из брендбука) ===================== */
+.logo__wm {
+  height: 18px;
+  width: auto;
+  display: block;
+}
+.footer__logo .logo__wm {
+  height: 17px;
+}
+
+/* ===================== ПОП-АП «ЗАКАЗАТЬ ЗВОНОК» ===================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(1, 18, 39, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalIn 0.2s ease;
+}
+@keyframes modalIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal {
+  position: relative;
+  background: #fff;
+  border-radius: var(--r-card);
+  padding: 38px 34px 34px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 30px 80px rgba(1, 37, 79, 0.4);
+}
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: var(--r-pill);
+  background: #f1f6fd;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #7b8a9c;
+}
+.modal__close:hover {
+  background: #e3edfa;
+}
+.modal h3 {
+  margin: 0 0 8px;
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.modal__phone {
+  display: inline-block;
+  margin: 0 0 6px;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--blue);
+  text-decoration: none;
+}
+.modal__phone:hover {
+  text-decoration: underline;
+}
+.modal__sub {
+  margin: 0 0 22px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modal__form input {
+  border: 1px solid #d6e3f2;
+  border-radius: var(--r-pill);
+  padding: 14px 20px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}

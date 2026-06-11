@@ -2,14 +2,14 @@ import { Sticker } from './common.jsx'
 import { ArrowIcon } from './icons/index.jsx'
 
 const BIG = [
-  { title: 'Детский сад', img: 'assets/room-kinder.png' },
-  { title: 'Школа', img: 'assets/room-desks.png' },
+  { title: 'Детский сад', img: 'assets/room-kinder.jpg' },
+  { title: 'Школа', img: 'assets/room-desks.jpg' },
 ]
 
 const SMALL = [
-  { title: ['Средняя', 'и старшая школа'], img: 'assets/room-map.png' },
-  { title: ['Дополнительное', 'образование'], img: 'assets/room-shelves.png' },
-  { title: ['Инклюзивное', 'образование'], img: 'assets/room-office.png' },
+  { title: ['Средняя', 'и старшая школа'], img: 'assets/room-map.jpg' },
+  { title: ['Дополнительное', 'образование'], img: 'assets/room-shelves.jpg' },
+  { title: ['Инклюзивное', 'образование'], img: 'assets/room-office.jpg' },
 ]
 
 function Tile({ size, img, title, arrowSize }) {

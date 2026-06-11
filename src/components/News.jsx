@@ -1,9 +1,9 @@
 import { Sticker, Cta } from './common.jsx'
 
 const ITEMS = [
-  { img: 'assets/room-tv.png' },
-  { img: 'assets/room-desks.png' },
-  { img: 'assets/room-map.png' },
+  { img: 'assets/room-tv.jpg' },
+  { img: 'assets/room-desks.jpg' },
+  { img: 'assets/room-map.jpg' },
 ]
 
 export default function News() {
