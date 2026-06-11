@@ -1,21 +1,7 @@
-import { useState } from 'react'
 import { Sticker } from './common.jsx'
-
-const REQUISITES = [
-  ['Полное наименование', 'ООО «КЛАСС ТРЕЙД»'],
-  ['ИНН', '6900000000'],
-  ['КПП', '690000000'],
-  ['ОГРН', '1006900000000'],
-  ['Юридический адрес', 'Город, улица, дом, офис'],
-  ['Расчётный счёт', '40700000000000000000'],
-  ['Банк', 'НАЗВАНИЕ БАНКА'],
-  ['БИК', '040000000'],
-  ['Корр. счёт', '30100000000000000000'],
-]
+import Requisites from './Requisites.jsx'
 
 export default function About() {
-  const [reqOpen, setReqOpen] = useState(false)
-
   return (
     <section className="section section--tight dots">
       {/* Синяя S-лента через блок */}
@@ -58,9 +44,7 @@ export default function About() {
             </p>
             <div className="about__actions">
               <a href="about" className="btn btn--ghost">Подробнее</a>
-              <button className="btn btn--ghost" onClick={() => setReqOpen(true)}>
-                Смотреть реквизиты
-              </button>
+              <Requisites />
             </div>
           </div>
           <div className="about__photo about__photo--right">
@@ -68,27 +52,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      {/* Реквизиты (имитация) */}
-      {reqOpen && (
-        <div className="modal-overlay" onClick={() => setReqOpen(false)}>
-          <div className="modal modal--wide" onClick={(e) => e.stopPropagation()}>
-            <button className="modal__close" aria-label="Закрыть" onClick={() => setReqOpen(false)}>
-              ×
-            </button>
-            <h3>Реквизиты компании</h3>
-            <dl className="requisites">
-              {REQUISITES.map(([k, v]) => (
-                <div key={k} className="requisites__row">
-                  <dt>{k}</dt>
-                  <dd>{v}</dd>
-                </div>
-              ))}
-            </dl>
-            <button className="btn" style={{ marginTop: '20px' }}>Скачать реквизиты</button>
-          </div>
-        </div>
-      )}
     </section>
   )
 }

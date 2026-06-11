@@ -1,4 +1,5 @@
 import { Sticker, Cta } from '../components/common.jsx'
+import Requisites from '../components/Requisites.jsx'
 
 function Icon({ d, extra }) {
   return (
@@ -75,14 +76,17 @@ export default function ContactsPage() {
           <Sticker a="НАШИ" b="КОНТАКТЫ" />
 
           <div className="contacts-page">
-            <div className="contact-cards">
-              {CARDS.map((c) => (
-                <div key={c.label} className="contact-card">
-                  <span className="contact-card__icon">{c.icon}</span>
-                  <div className="contact-card__label">{c.label}</div>
-                  <div className="contact-card__value">{c.value}</div>
-                </div>
-              ))}
+            <div className="contacts-left">
+              <div className="contact-cards">
+                {CARDS.map((c) => (
+                  <div key={c.label} className="contact-card">
+                    <span className="contact-card__icon">{c.icon}</span>
+                    <div className="contact-card__label">{c.label}</div>
+                    <div className="contact-card__value">{c.value}</div>
+                  </div>
+                ))}
+              </div>
+              <Requisites btnClass="btn" />
             </div>
 
             <div className="contact-form">

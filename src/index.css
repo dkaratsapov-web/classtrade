@@ -1087,7 +1087,7 @@ body {
 .footer {
   background: var(--navy);
   width: 100%;
-  padding: 36px 0;
+  padding: 24px 0;
 }
 .footer__inner {
   max-width: var(--w-band);
@@ -1102,7 +1102,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 .footer__logo .logo__mark {
   width: 38px;
@@ -1123,7 +1123,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 18px;
+  gap: 12px;
 }
 .footer__nav {
   display: flex;
@@ -2601,4 +2601,12 @@ img {
   line-height: 1.7;
   color: #41566f;
   margin: 0 0 14px;
+}
+
+/* Левая колонка «Контактов» (карточки + кнопка реквизитов) */
+.contacts-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
 }
