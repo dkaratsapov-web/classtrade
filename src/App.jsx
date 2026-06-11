@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage.jsx'
 import ContactsPage from './pages/ContactsPage.jsx'
 import ProjectsPage from './pages/ProjectsPage.jsx'
 import NewsPage from './pages/NewsPage.jsx'
+import CatalogPage from './pages/CatalogPage.jsx'
 
 // Простой hash-роутинг — работает на статике (GitHub Pages) без 404
 function useHashRoute() {
@@ -35,6 +36,8 @@ export default function App() {
         <ProjectsPage />
       ) : route === '/news' ? (
         <NewsPage />
+      ) : route === '/catalog' ? (
+        <CatalogPage />
       ) : (
         <Home />
       )}

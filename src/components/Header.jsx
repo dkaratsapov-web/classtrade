@@ -17,14 +17,14 @@ export default function Header() {
               <span className="logo__text">CLASS TRADE</span>
             </div>
           </a>
-          <button className="catalog-btn">
+          <a href="#/catalog" className="catalog-btn" onClick={close}>
             <span className="burger">
               <span></span>
               <span></span>
               <span></span>
             </span>
             Каталог
-          </button>
+          </a>
         </div>
 
         {/* Центральный блок: ссылки (десктоп) */}
