@@ -201,7 +201,7 @@ body {
   margin: 0 auto;
   padding: 22px 24px;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto auto 1fr auto;
   align-items: center;
   gap: 18px;
 }
@@ -1165,12 +1165,15 @@ body {
 /* ≤1024px — планшет: складываем сетки, прячем центральное меню шапки */
 @media (max-width: 1024px) {
   .header__bar {
-    grid-template-columns: auto auto;
-    justify-content: space-between;
+    grid-template-columns: auto 1fr auto;
     padding: 16px 20px;
   }
   .nav.header__seg {
     display: none;
+  }
+  /* «Каталог» по центру */
+  .catalog-btn {
+    justify-self: center;
   }
   .header__seg {
     padding: 7px 14px;
@@ -1278,34 +1281,43 @@ body {
   }
 
   .header__bar {
-    padding: 12px 16px;
-    gap: 10px;
+    padding: 10px 10px;
+    gap: 6px;
   }
   .header__seg {
-    padding: 6px 12px;
+    padding: 5px 10px;
   }
-  .header__seg--logo .logo__text {
-    display: none;
+  .logo {
+    gap: 8px;
   }
   .logo__mark {
-    width: 36px;
-    height: 36px;
-    font-size: 21px;
+    width: 28px;
+    height: 28px;
+  }
+  .header .logo__wm {
+    height: 12px;
   }
   .catalog-btn {
-    padding: 9px 14px;
-    font-size: 13px;
+    padding: 8px 12px;
+    font-size: 12.5px;
+    gap: 0;
+  }
+  /* на мобильной у «Каталога» прячем бургер — оставляем текст */
+  .catalog-btn .burger {
+    display: none;
   }
   .header__actions .call-btn,
   .header__actions .icon-btn {
     display: none;
   }
-  .header__left {
-    gap: 10px;
+  .header__actions.header__seg {
+    gap: 8px;
+    padding: 5px 10px;
   }
-  .icon-btn {
-    width: 36px;
-    height: 36px;
+  .cart-link,
+  .menu-toggle {
+    width: 30px;
+    height: 30px;
   }
 
   .hero {

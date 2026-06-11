@@ -72,23 +72,22 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__bar">
-        {/* Левый блок: логотип + кнопка каталога */}
-        <div className="header__left">
-          <a href="." className="header__seg header__seg--logo" onClick={close}>
-            <div className="logo">
-              <LogoMark />
-              <img className="logo__text logo__wm" src="wordmark.png" alt="CLASS TRADE" />
-            </div>
-          </a>
-          <a href="catalog" className="catalog-btn" onClick={close}>
-            <span className="burger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-            Каталог
-          </a>
-        </div>
+        {/* Логотип */}
+        <a href="." className="header__seg header__seg--logo" onClick={close}>
+          <div className="logo">
+            <LogoMark />
+            <img className="logo__text logo__wm" src="wordmark.png" alt="CLASS TRADE" />
+          </div>
+        </a>
+        {/* Кнопка каталога */}
+        <a href="catalog" className="catalog-btn" onClick={close}>
+          <span className="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          Каталог
+        </a>
 
         {/* Центральный блок: ссылки (десктоп) */}
         <nav className="header__seg nav">
