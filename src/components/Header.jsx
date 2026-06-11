@@ -30,8 +30,8 @@ export default function Header() {
         {/* Центральный блок: ссылки (десктоп) */}
         <nav className="header__seg nav">
           <a href="#/about">О компании</a>
-          <a href="#">Проекты</a>
-          <a href="#">Блог</a>
+          <a href="#/projects">Проекты</a>
+          <a href="#/news">Блог</a>
           <a href="#/contacts">Контакты</a>
         </nav>
 
@@ -66,8 +66,8 @@ export default function Header() {
       {menuOpen && (
         <div className="mobile-menu">
           <a href="#/about" onClick={close}>О компании</a>
-          <a href="#" onClick={close}>Проекты</a>
-          <a href="#" onClick={close}>Блог</a>
+          <a href="#/projects" onClick={close}>Проекты</a>
+          <a href="#/news" onClick={close}>Блог</a>
           <a href="#/contacts" onClick={close}>Контакты</a>
           <button className="call-btn mobile-menu__call" onClick={close}>
             Заказать звонок
