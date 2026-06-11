@@ -30,10 +30,10 @@ export default function Feature() {
               <path
                 d="M120,40 C 420,120 380,300 120,320 C 420,360 460,540 120,600"
                 stroke="#fff"
-                strokeWidth="70"
+                strokeWidth="60"
                 fill="none"
                 strokeLinecap="round"
-                opacity=".9"
+                opacity=".12"
               />
             </svg>
 

@@ -1142,3 +1142,283 @@ body {
   text-decoration: none;
   font-size: 13px;
 }
+
+/* ============================================================
+   АДАПТИВ — мобильная версия.
+   Десктоп-база 1440px не меняется; ниже — плавная деградация
+   с сохранением фирменного стиля и всех анимаций.
+   ============================================================ */
+
+/* ≤1440px — снимаем жёсткий min-width, сайт тянется по ширине */
+@media (max-width: 1440px) {
+  .page {
+    min-width: 0;
+  }
+}
+
+/* ≤1200px — уменьшаем самые крупные кегли */
+@media (max-width: 1200px) {
+  .hero__h1 {
+    font-size: 52px;
+  }
+  .hero__chip {
+    font-size: 42px;
+  }
+}
+
+/* ≤1024px — планшет: складываем сетки, прячем центральное меню шапки */
+@media (max-width: 1024px) {
+  .header__bar {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 16px 20px;
+  }
+  .nav.header__seg {
+    display: none;
+  }
+  .header__seg {
+    padding: 7px 14px;
+  }
+  .header__actions.header__seg {
+    gap: 10px;
+  }
+
+  .hero {
+    min-height: 0;
+    padding: 120px 0 56px;
+  }
+  .hero__h1 {
+    font-size: 40px;
+  }
+  .hero__chip {
+    font-size: 32px;
+    padding: 5px 18px;
+  }
+  .hero__grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    gap: 22px;
+    margin-top: 48px;
+  }
+  .hero__center {
+    order: -1;
+  }
+  .hero__photo--left,
+  .hero__photo--right {
+    transform: none;
+  }
+  .hero__photo img {
+    height: 300px;
+  }
+  .btn-hero {
+    min-width: 0;
+    width: 100%;
+    max-width: 460px;
+  }
+
+  .cards-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tiles-2,
+  .tiles-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .feature {
+    grid-template-columns: 1fr;
+  }
+  .feature__photo {
+    min-height: 320px;
+  }
+  .spheres {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .spheres__photo {
+    height: 360px;
+  }
+  .sphere-item__name {
+    font-size: 40px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .about__photo {
+    width: 100%;
+    max-width: 480px;
+    height: 280px;
+    margin: 0 auto;
+  }
+  .about__photo--left,
+  .about__photo--right {
+    transform: none;
+  }
+  .partners {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .news {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contacts {
+    grid-template-columns: 1fr;
+  }
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+  .footer__right {
+    align-items: flex-start;
+  }
+  .chip {
+    font-size: 34px;
+  }
+}
+
+/* ≤600px — телефон: всё в одну колонку, минимальные кегли */
+@media (max-width: 600px) {
+  .container,
+  .container-wide {
+    padding: 0 16px;
+  }
+
+  .header__bar {
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .header__seg {
+    padding: 6px 12px;
+  }
+  .logo__text {
+    font-size: 16px;
+  }
+  .logo__mark {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+  .catalog-btn {
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+  .call-btn,
+  .header__actions .icon-btn:first-child {
+    display: none;
+  }
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero {
+    padding: 96px 0 40px;
+  }
+  .hero__head {
+    padding: 0 16px;
+  }
+  .hero__h1 {
+    font-size: 28px;
+  }
+  .hero__stickers {
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .hero__chip {
+    font-size: 22px;
+    padding: 4px 12px;
+  }
+  .hero__grid {
+    margin-top: 36px;
+    gap: 18px;
+    padding: 0 16px;
+  }
+  .hero__photo img {
+    height: 210px;
+  }
+  .hero__usp li {
+    font-size: 15px;
+  }
+  .btn-hero {
+    font-size: 16px;
+    padding: 10px 10px 10px 24px;
+  }
+  .btn-hero__icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .section,
+  .section--navy {
+    padding: 48px 0;
+  }
+  .section--tight {
+    padding: 16px 0 48px;
+  }
+  .sticker {
+    margin-bottom: 32px;
+  }
+  .chip {
+    font-size: 26px;
+    padding: 6px 16px;
+  }
+
+  .cards-3 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .tiles-2,
+  .tiles-3 {
+    grid-template-columns: 1fr;
+  }
+  .tile--lg,
+  .tile--sm {
+    height: 220px;
+  }
+  .feature__panel {
+    padding: 32px 24px;
+  }
+  .feature__photo {
+    min-height: 240px;
+  }
+  .spheres__photo {
+    height: 280px;
+  }
+  .sphere-item__name {
+    font-size: 30px;
+  }
+  .sphere-item__desc {
+    font-size: 15px;
+  }
+  .partners {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .news {
+    grid-template-columns: 1fr;
+  }
+  .about__text {
+    padding: 20px;
+  }
+  .contact-form {
+    padding: 28px 22px;
+  }
+  .contact-info {
+    padding: 32px 26px;
+  }
+  .contact-info__value,
+  .contact-info__value--big {
+    font-size: 20px;
+  }
+
+  /* бегущая строка — мельче */
+  .bar__item {
+    font-size: 15px;
+    padding: 0 22px;
+  }
+  .bar__s {
+    width: 26px;
+    height: 26px;
+  }
+  .marquee__track {
+    padding: 12px 0;
+  }
+}
