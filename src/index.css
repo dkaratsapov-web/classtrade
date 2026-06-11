@@ -286,8 +286,13 @@ body {
 /* ===================== HERO ===================== */
 .hero {
   position: relative;
-  background: var(--navy);
-  padding: 64px 0 64px;
+  background-color: var(--navy);
+  /* первый экран на высоту вьюпорта (минус шапка ~72px), контент по центру */
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px 0;
   overflow: hidden;
 }
 .hero__head {
@@ -371,27 +376,37 @@ body {
   color: #cfe0ff;
   padding-bottom: 8px;
 }
-/* УТП с жирной точкой слева */
-.hero__lead {
+/* УТП списком с жирными точками слева */
+.hero__usp {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  flex-direction: column;
+  gap: 12px;
   text-align: left;
-  margin: 0 0 48px;
+}
+.hero__usp li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
 }
 .hero__lead-dot {
   flex: none;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--blue);
-  margin-top: 5px;
 }
-.hero__lead p {
-  margin: 0;
-  font-size: 16px;
+.hero__usp-note {
+  margin: 0 0 40px;
+  text-align: left;
+  font-size: 14px;
   line-height: 1.5;
-  color: #e6f1ff;
+  color: #cfe0ff;
 }
 .hero__cta {
   display: flex;
@@ -440,7 +455,7 @@ body {
 /* ===================== СЕКЦИИ ===================== */
 .section {
   position: relative;
-  background: var(--sky);
+  background-color: var(--sky);
   padding: 72px 0;
   overflow: hidden;
 }
@@ -848,7 +863,7 @@ body {
 /* ===================== КОНТАКТЫ ===================== */
 .section--navy {
   position: relative;
-  background: var(--navy);
+  background-color: var(--navy);
   padding: 64px 0;
   overflow: hidden;
 }

@@ -17,13 +17,23 @@ export default function Hero() {
         </div>
 
         <div className="hero__center">
-          <div className="hero__lead">
-            <span className="hero__lead-dot" aria-hidden="true" />
-            <p>
-              Высокое качество оборудования, индивидуальный подход и оперативная
-              установка — залог успешного обучения и комфорта преподавателей
-            </p>
-          </div>
+          <ul className="hero__usp">
+            <li>
+              <span className="hero__lead-dot" aria-hidden="true" />
+              Высокое качество оборудования
+            </li>
+            <li>
+              <span className="hero__lead-dot" aria-hidden="true" />
+              Индивидуальный подход
+            </li>
+            <li>
+              <span className="hero__lead-dot" aria-hidden="true" />
+              Оперативная установка
+            </li>
+          </ul>
+          <p className="hero__usp-note">
+            Залог успешного обучения и комфорта преподавателей
+          </p>
           <div className="hero__cta">
             <Cta label="Перейти в каталог" />
           </div>
