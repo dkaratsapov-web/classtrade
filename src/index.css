@@ -722,10 +722,10 @@ body {
   overflow: hidden;
 }
 .tile--lg {
-  height: 230px;
+  height: 380px;
 }
 .tile--sm {
-  height: 210px;
+  height: 360px;
 }
 .tile img {
   position: absolute;
