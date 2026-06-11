@@ -1619,7 +1619,7 @@ body {
     left: 16px;
     right: 16px;
     max-width: 300px;
-    margin-left: auto;
+    margin: 0 auto;
     background: rgba(1, 37, 79, 0.95);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
