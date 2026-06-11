@@ -2851,3 +2851,40 @@ img {
     gap: 12px 18px;
   }
 }
+
+/* ===================== ПАРТНЁРЫ — авто-скролл логотипов ===================== */
+.partners-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+.partners-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  padding: 0 10px;
+  animation: partnersScroll 50s linear infinite;
+  will-change: transform;
+}
+.partners-track .partner {
+  flex: 0 0 220px;
+  height: 120px;
+}
+@keyframes partnersScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .partners-track {
+    animation: none;
+  }
+}
+@media (max-width: 600px) {
+  .partners-track .partner {
+    flex: 0 0 160px;
+    height: 100px;
+  }
+}
