@@ -7,9 +7,9 @@ const BIG = [
 ]
 
 const SMALL = [
-  { title: ['Средняя', 'и старшая школа'], img: 'assets/room-map.jpg' },
-  { title: ['Дополнительное', 'образование'], img: 'assets/room-shelves.jpg' },
-  { title: ['Инклюзивное', 'образование'], img: 'assets/room-office.jpg' },
+  { title: ['Средняя', 'и старшая школа'], img: 'assets/cat-secondary.jpg' },
+  { title: ['Дополнительное', 'образование'], img: 'assets/cat-extra.jpg' },
+  { title: ['Инклюзивное', 'образование'], img: 'assets/cat-inclusive.jpg' },
 ]
 
 function Tile({ size, img, title, arrowSize }) {
