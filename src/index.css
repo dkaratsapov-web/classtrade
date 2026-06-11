@@ -1364,19 +1364,23 @@ body {
   .section--tight {
     padding: 16px 0 48px;
   }
+  /* плашки заголовков — почти во всю ширину контейнера */
   .sticker {
+    width: 94%;
     margin-bottom: 32px;
   }
   .chip {
-    font-size: 21px;
-    padding: 6px 14px;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    padding: 8px 16px;
   }
-  /* меньше «прижатия» диагональных плашек к краям на узком экране */
   .sticker .a {
-    transform: rotate(-2deg);
+    transform: rotate(-1.5deg);
   }
   .sticker .b {
-    transform: rotate(2deg);
+    transform: rotate(1.5deg);
+    margin-top: 10px;
   }
 
   .cards-3 {
