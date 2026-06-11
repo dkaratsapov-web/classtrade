@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { LogoMark } from './common.jsx'
 import { SearchIcon, HeartIcon, CartIcon } from './icons/index.jsx'
+import { useCart } from '../cart/CartContext.jsx'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const close = () => setMenuOpen(false)
+  const { count } = useCart()
 
   return (
     <header className="header">
@@ -44,9 +46,10 @@ export default function Header() {
           <button className="icon-btn" aria-label="Избранное">
             <HeartIcon />
           </button>
-          <button className="icon-btn" aria-label="Корзина">
+          <a href="#/cart" className="cart-link" aria-label="Корзина" onClick={close}>
             <CartIcon />
-          </button>
+            {count > 0 && <span className="cart-badge">{count}</span>}
+          </a>
           <button
             className="menu-toggle"
             aria-label="Меню"

@@ -90,7 +90,7 @@ export default function CatalogPage() {
           <div className="catalog-subs">
             {cat.subs.map((s) => {
               const label = typeof s === 'string' ? s : s.name
-              const href = typeof s === 'string' ? '#' : `#/catalog/${s.slug}`
+              const href = typeof s === 'string' ? '#/products' : `#/catalog/${s.slug}`
               return (
                 <a key={label} href={href} className="sub-card">
                   <span>{label}</span>

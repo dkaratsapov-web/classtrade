@@ -67,7 +67,10 @@ export default function LandingPage({ slug }) {
               </div>
             ))}
           </div>
-          <div className="load-more">
+          <div className="load-more" style={{ gap: '14px', flexWrap: 'wrap' }}>
+            <a href="#/products" className="btn" style={{ textDecoration: 'none' }}>
+              Смотреть товары →
+            </a>
             <a href="#/catalog" className="btn btn--ghost" style={{ textDecoration: 'none' }}>
               ← Вернуться в каталог
             </a>
