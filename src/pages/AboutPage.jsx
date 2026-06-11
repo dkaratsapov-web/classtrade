@@ -36,7 +36,7 @@ export default function AboutPage() {
       <section className="about-hero dots-dark">
         <div className="container about-hero__inner">
           <nav className="breadcrumb">
-            <a href="#/">Главная</a>
+            <a href=".">Главная</a>
             <span>—</span>
             <span>О компании</span>
           </nav>
@@ -126,7 +126,7 @@ export default function AboutPage() {
               <label className="contact-form__agree">
                 <i></i>Я согласен с политикой конфиденциальности сайта
               </label>
-              <Cta label="Оставить заявку" />
+              <Cta label="Оставить заявку" noArrow />
             </div>
           </div>
         </div>

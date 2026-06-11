@@ -2,6 +2,7 @@ import { Sticker } from '../components/common.jsx'
 import AdvantageBar from '../components/AdvantageBar.jsx'
 import Contacts from '../components/Contacts.jsx'
 import { LANDINGS } from '../data/landings.js'
+import { SUBS_BY_SLUG, genericLanding } from '../data/catalog.js'
 
 function Check() {
   return (
@@ -12,16 +13,22 @@ function Check() {
 }
 
 export default function LandingPage({ slug }) {
-  const data = LANDINGS[slug]
+  // детальный контент (Детский сад) или типовая посадочная по реестру
+  let data = LANDINGS[slug]
+  if (!data) {
+    const reg = SUBS_BY_SLUG[slug]
+    if (reg) data = genericLanding(reg.title, reg.category)
+  }
+  const category = data?.category || 'Детский сад'
 
   if (!data) {
     return (
       <section className="about-hero dots-dark">
         <div className="container about-hero__inner">
           <nav className="breadcrumb">
-            <a href="#/">Главная</a>
+            <a href=".">Главная</a>
             <span>—</span>
-            <a href="#/catalog">Каталог</a>
+            <a href="catalog">Каталог</a>
           </nav>
           <h1 className="landing-hero__title">Раздел в разработке</h1>
           <p className="about-hero__tagline">
@@ -39,11 +46,11 @@ export default function LandingPage({ slug }) {
       <section className="about-hero dots-dark">
         <div className="container about-hero__inner">
           <nav className="breadcrumb">
-            <a href="#/">Главная</a>
+            <a href=".">Главная</a>
             <span>—</span>
-            <a href="#/catalog">Каталог</a>
+            <a href="catalog">Каталог</a>
             <span>—</span>
-            <span>Детский сад</span>
+            <span>{category}</span>
             <span>—</span>
             <span>{data.title}</span>
           </nav>
@@ -68,10 +75,10 @@ export default function LandingPage({ slug }) {
             ))}
           </div>
           <div className="load-more" style={{ gap: '14px', flexWrap: 'wrap' }}>
-            <a href="#/products" className="btn" style={{ textDecoration: 'none' }}>
+            <a href="products" className="btn" style={{ textDecoration: 'none' }}>
               Смотреть товары →
             </a>
-            <a href="#/catalog" className="btn btn--ghost" style={{ textDecoration: 'none' }}>
+            <a href="catalog" className="btn btn--ghost" style={{ textDecoration: 'none' }}>
               ← Вернуться в каталог
             </a>
           </div>
@@ -98,9 +105,9 @@ export default function LandingPage({ slug }) {
 
       <AdvantageBar
         items={[
-          'Соответствие ФГОС ДО',
+          'Соответствие ФГОС',
           'Поставки по 44-ФЗ',
-          '2700+ садов обновят до 2030',
+          'Снабдили 500+ объектов',
           'Доставка по всей России',
           'Гарантия и сервис',
         ]}

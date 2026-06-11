@@ -19,7 +19,7 @@ export default function NewsPage() {
       <section className="about-hero dots-dark">
         <div className="container about-hero__inner">
           <nav className="breadcrumb">
-            <a href="#/">Главная</a>
+            <a href=".">Главная</a>
             <span>—</span>
             <span>Новости</span>
           </nav>

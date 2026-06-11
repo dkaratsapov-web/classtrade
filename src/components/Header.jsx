@@ -39,13 +39,13 @@ export default function Header() {
       <div className="header__bar">
         {/* Левый блок: логотип + кнопка каталога */}
         <div className="header__left">
-          <a href="#/" className="header__seg header__seg--logo" onClick={close}>
+          <a href="." className="header__seg header__seg--logo" onClick={close}>
             <div className="logo">
               <LogoMark />
               <img className="logo__text logo__wm" src="wordmark.png" alt="CLASS TRADE" />
             </div>
           </a>
-          <a href="#/catalog" className="catalog-btn" onClick={close}>
+          <a href="catalog" className="catalog-btn" onClick={close}>
             <span className="burger">
               <span></span>
               <span></span>
@@ -57,10 +57,10 @@ export default function Header() {
 
         {/* Центральный блок: ссылки (десктоп) */}
         <nav className="header__seg nav">
-          <a href="#/about">О компании</a>
-          <a href="#/projects">Проекты</a>
-          <a href="#/news">Блог</a>
-          <a href="#/contacts">Контакты</a>
+          <a href="about">О компании</a>
+          <a href="projects">Проекты</a>
+          <a href="news">Блог</a>
+          <a href="contacts">Контакты</a>
         </nav>
 
         {/* Правый блок: поиск, заказать звонок, избранное, корзина + меню (моб.) */}
@@ -72,7 +72,7 @@ export default function Header() {
           <button className="icon-btn" aria-label="Избранное">
             <HeartIcon />
           </button>
-          <a href="#/cart" className="cart-link" aria-label="Корзина" onClick={close}>
+          <a href="cart" className="cart-link" aria-label="Корзина" onClick={close}>
             <CartIcon />
             {count > 0 && <span className="cart-badge">{count}</span>}
           </a>
@@ -94,10 +94,10 @@ export default function Header() {
       {/* Выпадающее меню для узких экранов */}
       {menuOpen && (
         <div className="mobile-menu">
-          <a href="#/about" onClick={close}>О компании</a>
-          <a href="#/projects" onClick={close}>Проекты</a>
-          <a href="#/news" onClick={close}>Блог</a>
-          <a href="#/contacts" onClick={close}>Контакты</a>
+          <a href="about" onClick={close}>О компании</a>
+          <a href="projects" onClick={close}>Проекты</a>
+          <a href="news" onClick={close}>Блог</a>
+          <a href="contacts" onClick={close}>Контакты</a>
           <button className="call-btn mobile-menu__call" onClick={openCall}>
             Заказать звонок
           </button>
@@ -123,7 +123,7 @@ export default function Header() {
               <label className="contact-form__agree">
                 <i></i>Я согласен с политикой конфиденциальности сайта
               </label>
-              <Cta label="Заказать звонок" />
+              <Cta label="Заказать звонок" noArrow />
             </div>
           </div>
         </div>

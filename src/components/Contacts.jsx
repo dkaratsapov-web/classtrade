@@ -17,7 +17,7 @@ export default function Contacts() {
               <label className="contact-form__agree">
                 <i></i>Я согласен с политикой конфиденциальности сайта
               </label>
-              <Cta label="Оставить заявку" />
+              <Cta label="Оставить заявку" noArrow />
             </div>
           </div>
 

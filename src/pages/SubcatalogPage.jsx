@@ -48,9 +48,9 @@ export default function SubcatalogPage() {
       <section className="about-hero dots-dark">
         <div className="container about-hero__inner">
           <nav className="breadcrumb">
-            <a href="#/">Главная</a>
+            <a href=".">Главная</a>
             <span>—</span>
-            <a href="#/catalog">Каталог</a>
+            <a href="catalog">Каталог</a>
             <span>—</span>
             <span>Ранний возраст</span>
           </nav>

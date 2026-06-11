@@ -13,11 +13,11 @@ export default function Footer() {
         </div>
         <div className="footer__right">
           <nav className="footer__nav">
-            <a href="#">Каталог</a>
-            <a href="#">О компании</a>
-            <a href="#">Проекты</a>
-            <a href="#">Блог</a>
-            <a href="#">Контакты</a>
+            <a href="catalog">Каталог</a>
+            <a href="about">О компании</a>
+            <a href="projects">Проекты</a>
+            <a href="news">Блог</a>
+            <a href="contacts">Контакты</a>
           </nav>
           <div className="footer__legal">
             <a href="#">Договор-оферта</a>

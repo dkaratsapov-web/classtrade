@@ -10,14 +10,16 @@ export function Sticker({ a, b, aClass = 'chip--navy', bClass = 'chip--navy' }) 
   )
 }
 
-// Pill-кнопка + парная круглая кнопка со стрелкой
-export function Cta({ label, btnClass = 'btn', arrowClass = 'btn-arrow', arrowStroke = '#fff' }) {
+// Pill-кнопка + парная круглая кнопка со стрелкой (стрелку можно убрать — noArrow)
+export function Cta({ label, btnClass = 'btn', arrowClass = 'btn-arrow', arrowStroke = '#fff', noArrow = false }) {
   return (
     <div className="cta">
       <button className={btnClass}>{label}</button>
-      <button className={arrowClass} aria-label="Далее">
-        <ArrowIcon size={20} stroke={arrowStroke} />
-      </button>
+      {!noArrow && (
+        <button className={arrowClass} aria-label="Далее">
+          <ArrowIcon size={20} stroke={arrowStroke} />
+        </button>
+      )}
     </div>
   )
 }

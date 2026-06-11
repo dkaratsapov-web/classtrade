@@ -41,7 +41,7 @@ export default function ContactsPage() {
       <section className="about-hero dots-dark">
         <div className="container about-hero__inner">
           <nav className="breadcrumb">
-            <a href="#/">Главная</a>
+            <a href=".">Главная</a>
             <span>—</span>
             <span>Контакты</span>
           </nav>
@@ -95,7 +95,7 @@ export default function ContactsPage() {
                 <label className="contact-form__agree">
                   <i></i>Я согласен с политикой конфиденциальности сайта
                 </label>
-                <Cta label="Оставить заявку" />
+                <Cta label="Оставить заявку" noArrow />
               </div>
             </div>
           </div>

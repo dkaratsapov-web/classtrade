@@ -1,15 +1,16 @@
 import { Fragment } from 'react'
 
 // Синяя «бегущая строка» — бесконечная горизонтальная прокрутка (marquee).
-// Пункты белым UPPERCASE, между ними иконка-«S».
+// Несколько одинаковых копий контента + сдвиг ровно на ОДНУ копию (-100%/REPS),
+// чтобы «хвост» ленты никогда не попадал в кадр (нет пустых зазоров на любой ширине).
+const REPS = 6
+
 export default function AdvantageBar({ items, small = false }) {
-  // Группа: после каждого пункта — разделитель «S». Две одинаковые копии
-  // в треке дают бесшовный цикл (сдвиг на -50% = ширина одной копии).
   const group = (prefix) =>
     items.map((item, i) => (
-      <Fragment key={prefix + i}>
+      <Fragment key={prefix + '-' + i}>
         <span className="bar__item">{item}</span>
-        <span className="bar__s" aria-hidden="true">S</span>
+        <img className="bar__s" src="logo-mark.png" alt="" aria-hidden="true" />
       </Fragment>
     ))
 
@@ -17,8 +18,9 @@ export default function AdvantageBar({ items, small = false }) {
     <div className={`bar${small ? ' bar--small' : ''}`}>
       <div className="marquee">
         <div className="marquee__track">
-          {group('a')}
-          {group('b')}
+          {Array.from({ length: REPS }).map((_, k) => (
+            <Fragment key={k}>{group(k)}</Fragment>
+          ))}
         </div>
       </div>
     </div>

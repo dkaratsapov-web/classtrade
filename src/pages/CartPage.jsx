@@ -11,7 +11,7 @@ export default function CartPage() {
       <section className="about-hero dots-dark">
         <div className="container about-hero__inner">
           <nav className="breadcrumb">
-            <a href="#/">Главная</a>
+            <a href=".">Главная</a>
             <span>—</span>
             <span>Корзина</span>
           </nav>
@@ -24,7 +24,7 @@ export default function CartPage() {
           {count === 0 ? (
             <div className="cart-empty">
               <p>Ваша корзина пуста</p>
-              <a href="#/products" className="btn" style={{ textDecoration: 'none' }}>
+              <a href="products" className="btn" style={{ textDecoration: 'none' }}>
                 Перейти в каталог
               </a>
             </div>
@@ -76,7 +76,7 @@ export default function CartPage() {
                   <label className="contact-form__agree">
                     <i></i>Я согласен с политикой конфиденциальности сайта
                   </label>
-                  <Cta label="Оформить заказ" />
+                  <Cta label="Оформить заказ" noArrow />
                 </div>
               </div>
             </div>

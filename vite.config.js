@@ -5,6 +5,15 @@ import react from '@vitejs/plugin-react'
 // base: './' — относительные пути ассетов, чтобы сайт работал и на под-пути
 // GitHub Pages (https://<user>.github.io/classtrade/), и на корневом домене.
 export default defineConfig({
-  base: './',
+  base: '/classtrade/',
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        },
+      },
+    },
+  },
 })

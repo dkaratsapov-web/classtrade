@@ -42,12 +42,12 @@ export default function Hero() {
       </div>
 
       <div className="hero__cta">
-        <button className="btn-hero">
+        <a href="catalog" className="btn-hero">
           <span className="btn-hero__label">Перейти в каталог</span>
           <span className="btn-hero__icon">
             <ArrowIcon size={22} stroke="#036aff" />
           </span>
-        </button>
+        </a>
       </div>
     </section>
   )
