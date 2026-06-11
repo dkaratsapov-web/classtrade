@@ -2610,3 +2610,32 @@ img {
   gap: 20px;
   align-items: flex-start;
 }
+
+/* Анимации кнопок шапки при наведении */
+.catalog-btn {
+  transition: transform 0.15s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.catalog-btn:hover {
+  transform: translateY(-2px);
+  background: #1f7bff;
+  box-shadow: 0 10px 26px rgba(3, 106, 255, 0.45);
+}
+.call-btn {
+  transition: transform 0.15s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.call-btn:hover {
+  transform: translateY(-2px);
+  background: #fff;
+  color: var(--navy);
+  border-color: #fff;
+}
+.icon-btn,
+.cart-link {
+  transition: transform 0.15s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.icon-btn:hover,
+.cart-link:hover {
+  transform: translateY(-2px);
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
