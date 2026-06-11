@@ -187,11 +187,11 @@ body {
 
 /* ===================== HEADER (прерывистая, на frosted-blur) ===================== */
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 30;
+  z-index: 50;
   width: 100%;
   background: transparent;
 }
@@ -211,14 +211,14 @@ body {
 }
 /* Отдельный блок-сегмент шапки на заблюренной полупрозрачной подложке */
 .header__seg {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(1, 37, 79, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--r-pill);
   padding: 8px 18px;
   display: flex;
   align-items: center;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 .header__seg--logo {
   padding: 6px 18px;
@@ -568,13 +568,14 @@ body {
   height: 20px;
   border-radius: var(--r-pill);
   background: var(--blue);
+  transform: translateX(0);
 }
 .adv-toggle--blue {
   background: rgba(255, 255, 255, 0.35);
-  justify-content: flex-end;
 }
 .adv-toggle--blue i {
   background: #fff;
+  transform: translateX(20px);
 }
 .adv-card h3 {
   margin: 22px 0 12px;
@@ -602,7 +603,8 @@ body {
 .adv-card p,
 .adv-toggle,
 .adv-toggle i {
-  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adv-toggle {
   cursor: pointer;
@@ -621,10 +623,10 @@ body {
 }
 .adv-card:has(.adv-toggle:hover) .adv-toggle {
   background: rgba(255, 255, 255, 0.35);
-  justify-content: flex-end;
 }
 .adv-card:has(.adv-toggle:hover) .adv-toggle i {
   background: #fff;
+  transform: translateX(20px);
 }
 
 /* Синяя карточка → белая */
@@ -640,10 +642,10 @@ body {
 }
 .adv-card--blue:has(.adv-toggle:hover) .adv-toggle {
   background: #dce9fb;
-  justify-content: flex-start;
 }
 .adv-card--blue:has(.adv-toggle:hover) .adv-toggle i {
   background: var(--blue);
+  transform: translateX(0);
 }
 
 /* ===================== СИНЯЯ ПОЛОСА (advantage bar) ===================== */
