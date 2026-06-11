@@ -1,4 +1,4 @@
-import { Sticker, Cta } from '../components/common.jsx'
+import { Sticker, LeadForm } from '../components/common.jsx'
 import Requisites from '../components/Requisites.jsx'
 
 function Icon({ d, extra }) {
@@ -91,16 +91,10 @@ export default function ContactsPage() {
 
             <div className="contact-form">
               <h3>Оставьте заявку и мы свяжемся с вами</h3>
-              <div className="contact-form__fields">
-                <input placeholder="Имя" />
-                <input placeholder="Телефон" />
-                <input placeholder="E-mail" />
-                <input placeholder="Комментарий" />
-                <label className="contact-form__agree">
-                  <i></i>Я согласен с политикой конфиденциальности сайта
-                </label>
-                <Cta label="Оставить заявку" noArrow />
-              </div>
+              <LeadForm
+                fields={['Имя', 'Телефон', 'E-mail', 'Комментарий']}
+                submitLabel="Оставить заявку"
+              />
             </div>
           </div>
         </div>

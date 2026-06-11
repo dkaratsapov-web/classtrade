@@ -1,4 +1,4 @@
-import { Sticker, Cta } from '../components/common.jsx'
+import { Sticker, LeadForm } from '../components/common.jsx'
 import AdvantageBar from '../components/AdvantageBar.jsx'
 import Contacts from '../components/Contacts.jsx'
 
@@ -118,16 +118,10 @@ export default function AboutPage() {
             мы перезвоним и проконсультируем по всем вопросам.
           </p>
           <div className="contact-form about-form">
-            <div className="contact-form__fields">
-              <input placeholder="Имя" />
-              <input placeholder="Телефон" />
-              <input placeholder="E-mail" />
-              <input placeholder="Комментарий" />
-              <label className="contact-form__agree">
-                <i></i>Я согласен с политикой конфиденциальности сайта
-              </label>
-              <Cta label="Оставить заявку" noArrow />
-            </div>
+            <LeadForm
+              fields={['Имя', 'Телефон', 'E-mail', 'Комментарий']}
+              submitLabel="Оставить заявку"
+            />
           </div>
         </div>
       </section>

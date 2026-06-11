@@ -1,4 +1,4 @@
-import { Sticker, Cta } from './common.jsx'
+import { Sticker, LeadForm } from './common.jsx'
 
 export default function Contacts() {
   return (
@@ -9,16 +9,10 @@ export default function Contacts() {
         <div className="contacts">
           <div className="contact-form">
             <h3>Оставьте заявку и мы свяжемся с вами</h3>
-            <div className="contact-form__fields">
-              <input placeholder="Имя" />
-              <input placeholder="Телефон" />
-              <input placeholder="E-mail" />
-              <input placeholder="Комментарий" />
-              <label className="contact-form__agree">
-                <i></i>Я согласен с политикой конфиденциальности сайта
-              </label>
-              <Cta label="Оставить заявку" noArrow />
-            </div>
+            <LeadForm
+              fields={['Имя', 'Телефон', 'E-mail', 'Комментарий']}
+              submitLabel="Оставить заявку"
+            />
           </div>
 
           <div className="contact-info">

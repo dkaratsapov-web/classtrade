@@ -1,5 +1,4 @@
 import { Sticker } from './common.jsx'
-import Requisites from './Requisites.jsx'
 
 export default function About() {
   return (
@@ -44,7 +43,6 @@ export default function About() {
             </p>
             <div className="about__actions">
               <a href="about" className="btn btn--ghost">Подробнее</a>
-              <Requisites />
             </div>
           </div>
           <div className="about__photo about__photo--right">

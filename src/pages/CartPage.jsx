@@ -1,4 +1,4 @@
-import { Sticker, Cta } from '../components/common.jsx'
+import { Sticker, LeadForm } from '../components/common.jsx'
 import Contacts from '../components/Contacts.jsx'
 import { fmtPrice, pluralGoods } from '../data/products.js'
 import { useCart } from '../cart/CartContext.jsx'
@@ -19,7 +19,7 @@ export default function CartPage() {
         </div>
       </section>
 
-      <section className="section dots">
+      <section className="section--navy dots-dark">
         <div className="container">
           {count === 0 ? (
             <div className="cart-empty">
@@ -67,17 +67,10 @@ export default function CartPage() {
               {/* Вместо оплаты — форма оформления заказа */}
               <div className="cart__form contact-form">
                 <h3>Введите данные для оформления заказа</h3>
-                <div className="contact-form__fields">
-                  <input placeholder="Название компании*" />
-                  <input placeholder="ИНН" />
-                  <input placeholder="Телефон*" />
-                  <input placeholder="Имя*" />
-                  <input placeholder="Email" />
-                  <label className="contact-form__agree">
-                    <i></i>Я согласен с политикой конфиденциальности сайта
-                  </label>
-                  <Cta label="Оформить заказ" noArrow />
-                </div>
+                <LeadForm
+                  fields={['Название компании*', 'ИНН', 'Телефон*', 'Имя*', 'Email']}
+                  submitLabel="Оформить заказ"
+                />
               </div>
             </div>
           )}
