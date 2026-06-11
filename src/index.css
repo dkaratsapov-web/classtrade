@@ -1301,7 +1301,7 @@ body {
     padding: 9px 14px;
     font-size: 13px;
   }
-  .call-btn,
+  .header__actions .call-btn,
   .header__actions .icon-btn:first-child {
     display: none;
   }
@@ -1584,5 +1584,65 @@ body {
   .letters {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+  }
+}
+
+/* ===================== МОБИЛЬНОЕ МЕНЮ ===================== */
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-pill);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  /* на узких экранах прячем поиск и «Заказать звонок», показываем кнопку меню */
+  .header__actions .icon-btn:first-child,
+  .header__actions .call-btn {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    top: 78px;
+    left: 16px;
+    right: 16px;
+    max-width: 300px;
+    margin-left: auto;
+    background: rgba(1, 37, 79, 0.95);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  }
+  .mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 11px 12px;
+    border-radius: 10px;
+  }
+  .mobile-menu a:active {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .mobile-menu__call {
+    margin-top: 6px;
+    text-align: center;
   }
 }
