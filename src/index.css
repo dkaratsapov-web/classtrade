@@ -2557,3 +2557,35 @@ img {
   color: inherit;
   cursor: pointer;
 }
+
+/* Карточка преимущества: инверсия цветов при наведении на иконку */
+.about-card {
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.about-card h3,
+.about-card p {
+  transition: color 0.3s ease;
+}
+.about-card__icon {
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.about-card__icon svg {
+  transition: stroke 0.3s ease;
+}
+.about-card:has(.about-card__icon:hover) {
+  background: var(--blue);
+  box-shadow: 0 14px 40px rgba(3, 106, 255, 0.25);
+}
+.about-card:has(.about-card__icon:hover) h3 {
+  color: #fff;
+}
+.about-card:has(.about-card__icon:hover) p {
+  color: #dcebff;
+}
+.about-card:has(.about-card__icon:hover) .about-card__icon {
+  background: #fff;
+}
+.about-card:has(.about-card__icon:hover) .about-card__icon svg {
+  stroke: var(--blue);
+}
