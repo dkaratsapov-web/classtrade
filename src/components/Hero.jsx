@@ -34,19 +34,20 @@ export default function Hero() {
           <p className="hero__usp-note">
             Залог успешного обучения и комфорта преподавателей
           </p>
-          <div className="hero__cta">
-            <button className="btn-hero">
-              <span className="btn-hero__label">Перейти в каталог</span>
-              <span className="btn-hero__icon">
-                <ArrowIcon size={20} stroke="#036aff" />
-              </span>
-            </button>
-          </div>
         </div>
 
         <div className="hero__photo hero__photo--right">
           <img src="assets/hero-2.png" alt="" />
         </div>
+      </div>
+
+      <div className="hero__cta">
+        <button className="btn-hero">
+          <span className="btn-hero__label">Перейти в каталог</span>
+          <span className="btn-hero__icon">
+            <ArrowIcon size={22} stroke="#036aff" />
+          </span>
+        </button>
       </div>
     </section>
   )
