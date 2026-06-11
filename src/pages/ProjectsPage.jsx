@@ -59,7 +59,7 @@ export default function ProjectsPage() {
             {IMGS.map((img, i) => (
               <a key={i} href="#" className="project-card">
                 <div className="project-card__media">
-                  <img src={`assets/${img}`} alt="" />
+                  <img loading="lazy" decoding="async" src={`assets/${img}`} alt="" />
                   <span className="project-card__arrow">
                     <ArrowIcon size={18} />
                   </span>

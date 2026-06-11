@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { LogoMark, Cta } from './common.jsx'
 import { SearchIcon, HeartIcon, CartIcon } from './icons/index.jsx'
 import { useCart } from '../cart/CartContext.jsx'
@@ -12,6 +12,27 @@ export default function Header() {
     setCallOpen(true)
   }
   const { count } = useCart()
+
+  // блокируем прокрутку фона при открытом меню/модалке
+  useEffect(() => {
+    document.body.style.overflow = menuOpen || callOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen, callOpen])
+
+  // закрытие модалки по Esc
+  useEffect(() => {
+    if (!callOpen && !menuOpen) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setCallOpen(false)
+        setMenuOpen(false)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [callOpen, menuOpen])
 
   return (
     <header className="header">

@@ -35,7 +35,7 @@ export default function Spheres() {
 
         <div className="spheres">
           <div className="spheres__photo">
-            <img src={SPHERES[active].img} alt="" />
+            <img loading="lazy" decoding="async" src={SPHERES[active].img} alt="" />
           </div>
           <div className="spheres__list">
             {SPHERES.map((s, i) => (

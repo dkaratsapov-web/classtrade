@@ -15,7 +15,7 @@ export default function News() {
           {ITEMS.map((n, i) => (
             <div key={i} className="news-card">
               <div className="news-card__media">
-                <img src={n.img} alt="" />
+                <img loading="lazy" decoding="async" src={n.img} alt="" />
                 <span className="news-card__badge">Новый проект</span>
               </div>
               <h3>Название новости</h3>

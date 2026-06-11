@@ -79,7 +79,7 @@ export default function CatalogPage() {
                 className={`cat-tile${i === active ? ' is-active' : ''}`}
                 onClick={() => setActive(i)}
               >
-                <img src={`assets/${c.img}`} alt="" />
+                <img loading="lazy" decoding="async" src={`assets/${c.img}`} alt="" />
                 <span className="cat-tile__shade"></span>
                 <span className="cat-tile__title">{c.name}</span>
               </button>

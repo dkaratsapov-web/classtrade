@@ -15,7 +15,7 @@ const SMALL = [
 function Tile({ size, img, title, arrowSize }) {
   return (
     <div className={`tile tile--${size}`}>
-      <img src={img} alt="" />
+      <img loading="lazy" decoding="async" src={img} alt="" />
       <div className="tile__shade"></div>
       <div className="tile__title">
         {Array.isArray(title)

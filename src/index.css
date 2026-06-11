@@ -2422,3 +2422,37 @@ body {
   font-size: 15px;
   outline: none;
 }
+
+/* ============================================================
+   Мобильная/производительная оптимизация (без изменения дизайна)
+   ============================================================ */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+img {
+  max-width: 100%;
+}
+/* плавная анимация бегущей строки на GPU */
+.marquee__track {
+  will-change: transform;
+}
+/* модалка прокручивается на маленьких экранах */
+.modal {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Уважаем «уменьшить движение»: отключаем тяжёлые анимации */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -36,7 +36,7 @@ export default function NewsPage() {
             {IMGS.map((img, i) => (
               <div key={i} className="news-card">
                 <div className="news-card__media">
-                  <img src={`assets/${img}`} alt="" />
+                  <img loading="lazy" decoding="async" src={`assets/${img}`} alt="" />
                   <span className="news-card__badge">01/01/2025</span>
                 </div>
                 <h3>Название новости</h3>
