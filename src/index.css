@@ -65,11 +65,6 @@ body {
   margin: 0 auto;
   padding: 0 24px;
 }
-.container-wide {
-  max-width: var(--w-band);
-  margin: 0 auto;
-  padding: 0 24px;
-}
 
 /* ===================== ЛОГОТИП ===================== */
 .logo {
@@ -413,43 +408,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 12px;
-}
-.hero__slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 26px 0 24px;
-  position: relative;
-  z-index: 2;
-}
-.slider-nav {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  color: #fff;
-}
-.slider-nav button {
-  background: transparent;
-  border: none;
-  color: #6f8db5;
-  cursor: pointer;
-  font-size: 18px;
-}
-.slider-nav__label {
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-size: 14px;
-  color: #cfe0ff;
-}
-.hero__down {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--r-pill);
-  background: var(--blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* ===================== СЕКЦИИ ===================== */

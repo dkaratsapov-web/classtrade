@@ -34,11 +34,3 @@ export function CartIcon({ size = 18, stroke = '#fff' }) {
     </svg>
   )
 }
-
-export function ChevronDownIcon({ size = 18, stroke = '#fff' }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth="2.4">
-      <path d="M6 9l6 6 6-6" />
-    </svg>
-  )
-}
