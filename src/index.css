@@ -1928,8 +1928,23 @@ body {
   }
 }
 @media (max-width: 600px) {
+  /* категории — горизонтальный скролл */
   .catalog-cats {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    gap: 14px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .cat-tile {
+    flex: 0 0 66%;
+    scroll-snap-align: start;
   }
   .catalog-subs {
     grid-template-columns: 1fr;
