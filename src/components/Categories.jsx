@@ -2,8 +2,8 @@ import { Sticker } from './common.jsx'
 import { ArrowIcon } from './icons/index.jsx'
 
 const BIG = [
-  { title: 'Детский сад', img: 'assets/room-kinder.jpg' },
-  { title: 'Школа', img: 'assets/room-desks.jpg' },
+  { title: 'Детский сад', img: 'assets/cat-kinder.jpg' },
+  { title: 'Школа', img: 'assets/cat-school.jpg' },
 ]
 
 const SMALL = [
