@@ -650,27 +650,43 @@ body {
 .bar {
   background: var(--blue);
   width: 100%;
+  overflow: hidden;
 }
-.bar__inner {
-  max-width: var(--w-band);
-  margin: 0 auto;
-  padding: 22px 24px;
+.marquee {
+  display: flex;
+}
+.marquee__track {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  flex: none;
+  white-space: nowrap;
+  padding: 15px 0;
+  animation: marquee 38s linear infinite;
+}
+.bar:hover .marquee__track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.bar__item {
   color: #fff;
   font-weight: 800;
   font-size: 20px;
   text-transform: uppercase;
+  padding: 0 34px;
 }
-.bar--small .bar__inner {
-  gap: 18px;
+.bar--small .bar__item {
   font-size: 18px;
 }
 .bar__s {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 9px;
   border: 2px solid #fff;
   display: flex;
@@ -680,9 +696,10 @@ body {
   font-weight: 900;
   flex: none;
 }
-.bar--small .bar__s {
-  width: 32px;
-  height: 32px;
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
 }
 
 /* ===================== КАТЕГОРИИ (фото-плитки) ===================== */
