@@ -7,12 +7,12 @@ export default function Header() {
       <div className="header__bar">
         {/* Левый блок: логотип + кнопка каталога */}
         <div className="header__left">
-          <div className="header__seg header__seg--logo">
+          <a href="#/" className="header__seg header__seg--logo">
             <div className="logo">
               <LogoMark />
               <span className="logo__text">CLASS TRADE</span>
             </div>
-          </div>
+          </a>
           <button className="catalog-btn">
             <span className="burger">
               <span></span>
@@ -25,7 +25,7 @@ export default function Header() {
 
         {/* Центральный блок: ссылки */}
         <nav className="header__seg nav">
-          <a href="#">О компании</a>
+          <a href="#/about">О компании</a>
           <a href="#">Проекты</a>
           <a href="#">Блог</a>
           <a href="#">Контакты</a>
