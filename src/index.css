@@ -216,7 +216,7 @@ body {
 .header__seg {
   background: rgba(1, 37, 79, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 12px;
+  border-radius: var(--r-pill);
   padding: 8px 18px;
   display: flex;
   align-items: center;
@@ -238,7 +238,7 @@ body {
   background: var(--blue);
   color: #fff;
   border: none;
-  border-radius: var(--r-btn);
+  border-radius: var(--r-pill);
   padding: 11px 22px;
   font-family: inherit;
   font-weight: 700;
@@ -285,7 +285,7 @@ body {
 .icon-btn {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: var(--r-pill);
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   background: transparent;
   color: #fff;
@@ -297,7 +297,7 @@ body {
 .call-btn {
   background: transparent;
   border: 1.5px solid rgba(255, 255, 255, 0.35);
-  border-radius: var(--r-btn);
+  border-radius: var(--r-pill);
   color: #fff;
   padding: 11px 22px;
   font-family: inherit;
@@ -1588,7 +1588,7 @@ body {
   display: none;
   width: 40px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: var(--r-pill);
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   background: transparent;
   cursor: pointer;
@@ -2025,7 +2025,7 @@ body {
   position: relative;
   width: 40px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: var(--r-pill);
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   background: transparent;
   display: flex;
