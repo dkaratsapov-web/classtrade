@@ -102,7 +102,7 @@ export default function Header() {
           <button className="icon-btn" aria-label="Поиск" onClick={() => setSearchOpen(true)}>
             <SearchIcon />
           </button>
-          <button className="call-btn" onClick={openCall}>Заказать звонок</button>
+          <button className="call-btn" onClick={openCall}>Пригласить в тендер</button>
           <button className="icon-btn" aria-label="Избранное">
             <HeartIcon />
           </button>
@@ -133,28 +133,34 @@ export default function Header() {
           <a href="news" onClick={close}>Блог</a>
           <a href="contacts" onClick={close}>Контакты</a>
           <button className="call-btn mobile-menu__call" onClick={openCall}>
-            Заказать звонок
+            Пригласить в тендер
           </button>
         </div>
       )}
 
-      {/* Поп-ап «Заказать звонок» */}
+      {/* Поп-ап «Пригласить в тендер» */}
       {callOpen && (
         <div className="modal-overlay" onClick={() => setCallOpen(false)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
+          <div className="modal modal--wide" onClick={(e) => e.stopPropagation()}>
             <button className="modal__close" aria-label="Закрыть" onClick={() => setCallOpen(false)}>
               ×
             </button>
-            <h3>Заказать звонок</h3>
-            <a className="modal__phone" href="tel:+74822111111">+7 (4822) 111-11-11</a>
+            <h3>Пригласить в тендер</h3>
             <p className="modal__sub">
-              Оставьте номер — перезвоним в течение 15 минут и проконсультируем по
-              всем вопросам.
+              Оставьте данные закупки — подготовим коммерческое предложение,
+              техническое задание и полный пакет документов по 44-ФЗ / 223-ФЗ.
             </p>
             <LeadForm
               className="modal__form"
-              fields={['Имя', 'Телефон*']}
-              submitLabel="Заказать звонок"
+              fields={[
+                'Название организации',
+                'ИНН',
+                'Контактное лицо',
+                'Телефон*',
+                'E-mail',
+                'Ссылка или номер закупки',
+              ]}
+              submitLabel="Пригласить в тендер"
             />
           </div>
         </div>
